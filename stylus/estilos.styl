@@ -1,4 +1,4 @@
-@css { /*  CSS3 Clases - Luis Gago Casas */ }
+@css { /*  CSS3 Clases - Roy */ }
 @import 'nib/vendor'
 @import 'simplegrid'
 @import 'keyframes'
@@ -18,6 +18,43 @@ vendor-prefixes = o ms moz webkit
 	font-style: normal
 	font-weight: 400
 	src: local('Crimson Text'), local('CrimsonText-Roman'), url(//fonts.gstatic.com/s/crimsontext/v6/3IFMwfRa07i-auYR-B-zNegdm0LZdjqr5-oayXSOefg.woff2) format('woff2')
+@font-face
+	font-family: "cafe-valenzuela"
+	src:url("../fonts/cafe-valenzuela.eot")
+	src:url("../fonts/cafe-valenzuela.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/cafe-valenzuela.woff") format("woff"),
+	url("../fonts/cafe-valenzuela.ttf") format("truetype"),
+	url("../fonts/cafe-valenzuela.svg#cafe-valenzuela") format("svg")
+	font-weight: normal
+	font-style: normal
+[data-icon]:before
+	font-family: "cafe-valenzuela" !important
+	content: attr(data-icon)
+	font-style: normal !important
+	font-weight: normal !important
+	font-variant: normal !important
+	text-transform: none !important
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+[class^="icon-"]:before,
+[class*=" icon-"]:before
+	font-family: "cafe-valenzuela" !important
+	font-style: normal !important
+	font-weight: normal !important
+	font-variant: normal !important
+	text-transform: none !important
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+.icon-facebook4:before
+	content: "a"
+.icon-twitter15:before
+	content: "b"
+.icon-youtube26:before
+	content: "c"	
 border-radius()
 	-webkit-border-radius arguments
 	-moz-border-radius arguments
@@ -119,7 +156,7 @@ h1
 .header
 	background: #8C2100
 	border-radius: 3px 3px 0px 0px
-	padding 0
+	//padding 0
 .footer
 	background #8C2100
 	border-radius: 0px 0px 3px 3px
@@ -128,6 +165,11 @@ h1
 .main
 	background: #5D1700
 	padding 0
+	h1
+		color: #FFF
+		letter-spacing: 2px
+		padding: 10px
+		border-bottom: 5px solid rgb(218, 37, 28)
 .aside-1
 	background #F28504
 //Comunes
@@ -198,6 +240,38 @@ header
 		img
 			width: 20%
 			float: left
+.lista-productos
+	flex-flow: row wrap
+	flexbox()
+	text-align center
+	li
+		background: #DA251C
+		padding: 2px
+		margin: 10px
+		width: 20.133%
+		.titulo
+			color white
+			padding 2px
+		.precio
+			font-size: 2em
+			color: rgb(218, 37, 28)
+			text-shadow: 0px 0px 5px rgb(255, 255, 255)
+		figure
+			img
+				width 100%
+.content-text
+	padding: 10px
+	color: white
+	font-family 'Quicksand', sans-serif
+	h2
+		border-bottom: 5px solid rgb(218, 37, 28)
+		display: inline-block
+		margin: 15px 0px 0px 0px
+	ul
+		li
+			list-style initial
+	p
+		margin: 10px
 //Foter
 footer
 	font-family 'Quicksand', sans-serif

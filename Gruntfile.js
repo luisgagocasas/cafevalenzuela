@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         stylus: {
             compile: {
                 options: {
-                    compress: true,
+                    compress: false,
                     linenos: false
                 },
                 files: [{
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 			}
 	    },
 	    // Compilar Jade PHP
-		/*jadephp: {
+		jadephp: {
             compile: {
                 options: {
                     client: false,
@@ -35,17 +35,10 @@ module.exports = function (grunt) {
                 },
                 files: {
 					'www/index.html': 'jade/index.jade',
-				}
-            }
-        },*/
-        jade: {
-            compile: {
-                options: {
-                    client: false,
-                    pretty: true
-                },
-                files: {
-					'www/index.html': 'jade/index.jade',
+                    'www/quienes-somos.html': 'jade/quienes-somos.jade',
+                    'www/historia.html': 'jade/historia.jade',
+                    'www/productos.html': 'jade/productos.jade',
+                    'www/ubicacion.html': 'jade/ubicacion.jade',
 				}
             }
         },
@@ -58,14 +51,7 @@ module.exports = function (grunt) {
                     message: "uglify iniciado!"
                 }
             },
-            /*jadephp: {
-                options: {
-                    enabled: true,
-                    max_jshint_notifications: 1,
-                    message: "jade iniciado!"
-                }
-            },*/
-            jade: {
+            jadephp: {
                 options: {
                     enabled: true,
                     max_jshint_notifications: 1,
@@ -97,14 +83,9 @@ module.exports = function (grunt) {
                 tasks: ['uglify']
             },
             //observar el jade PHP
-			/*jadephp: {
+			jadephp: {
 				files: ["jade/*.jade"],
 				tasks: ["jadephp"]
-			}*/
-			//observar el jade
-			jade: {
-				files: ["jade/*.jade"],
-				tasks: ["jade"]
 			}
 		},
 	});
@@ -113,5 +94,5 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 	// Defino las tareas.
     //grunt.registerTask('default', ['stylus','uglify','jadephp', 'notify','watch']);
-    grunt.registerTask('default', ['stylus','uglify','jade', 'notify','watch']);
+    grunt.registerTask('default', ['stylus','uglify','jadephp', 'notify','watch']);
 };

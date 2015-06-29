@@ -8,11 +8,11 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-jade": "*",
+    "grunt-jade": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-jade-php": "*",
-    "grunt-jade": "*",
     "grunt-notify": "*",
     "load-grunt-tasks": "*"
   },
