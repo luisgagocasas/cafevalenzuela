@@ -26,8 +26,19 @@ module.exports = function (grunt) {
 				}
 			}
 	    },
-	    // Compilar Jade
-		jadephp: {
+	    // Compilar Jade PHP
+		/*jadephp: {
+            compile: {
+                options: {
+                    client: false,
+                    pretty: true
+                },
+                files: {
+					'www/index.html': 'jade/index.jade',
+				}
+            }
+        },*/
+        jade: {
             compile: {
                 options: {
                     client: false,
@@ -47,7 +58,14 @@ module.exports = function (grunt) {
                     message: "uglify iniciado!"
                 }
             },
-            jadephp: {
+            /*jadephp: {
+                options: {
+                    enabled: true,
+                    max_jshint_notifications: 1,
+                    message: "jade iniciado!"
+                }
+            },*/
+            jade: {
                 options: {
                     enabled: true,
                     max_jshint_notifications: 1,
@@ -78,10 +96,15 @@ module.exports = function (grunt) {
                 files: ['javascript/*.js'],
                 tasks: ['uglify']
             },
-            //observar el jade
-			jadephp: {
+            //observar el jade PHP
+			/*jadephp: {
 				files: ["jade/*.jade"],
 				tasks: ["jadephp"]
+			}*/
+			//observar el jade
+			jade: {
+				files: ["jade/*.jade"],
+				tasks: ["jade"]
 			}
 		},
 	});
@@ -89,6 +112,6 @@ module.exports = function (grunt) {
 	//Cargamos todos los tasks declarados en package.json
 	require('load-grunt-tasks')(grunt);
 	// Defino las tareas.
-    grunt.registerTask('default', ['stylus','uglify','jadephp', 'notify','watch']);
-	//grunt.registerTask('default', ['stylus','uglify', 'notify','watch']);
+    //grunt.registerTask('default', ['stylus','uglify','jadephp', 'notify','watch']);
+    grunt.registerTask('default', ['stylus','uglify','jade', 'notify','watch']);
 };

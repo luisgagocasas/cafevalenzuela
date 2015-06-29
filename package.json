@@ -1,7 +1,7 @@
 {
-  "name": "portada2015",
+  "name": "cafevalenzuela",
   "version": "0.0.1",
-  "description": "Portada 2015",
+  "description": "cafevalenzuela roy cervantes",
   "main": "Gruntfile.js",
   "author": "Luis Gago Casas",
   "license": "MIT",
@@ -12,11 +12,12 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-jade-php": "*",
+    "grunt-jade": "*",
     "grunt-notify": "*",
     "load-grunt-tasks": "*"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@gitlab.com:plataformaeducativa/portada-2015.git"
+    "url": "ssh://git@github.com:luisgagocasas/cafevalenzuela.git"
   }
 }
